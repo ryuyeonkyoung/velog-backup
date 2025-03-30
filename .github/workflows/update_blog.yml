@@ -6,7 +6,7 @@ on:
     branches:
       - master  # 또는 워크플로우를 트리거하고 싶은 브랜치 이름
   schedule:
-    - cron: '35 12 * * *'
+    - cron: '50 14 * * *'
 
 jobs:
   update_blog:
