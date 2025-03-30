@@ -6,7 +6,7 @@ on:
     branches:
       - master  # 또는 워크플로우를 트리거하고 싶은 브랜치 이름
   schedule:
-    - cron: '0 0 * * *'  # 매일 자정에 실행
+    - cron: '30 0 * * *'  # 매일 자정에 실행
 
 jobs:
   update_blog:
@@ -20,7 +20,7 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git push https://${{ secrets.GH_PAT }}@github.com/rimgosu/velog.git
+          git push https://${{ secrets.GH_PAT }}@github.com/ryuyeonkyoung/velog-backup.git
 
       - name: Set up Python
         uses: actions/setup-python@v2
